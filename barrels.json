@@ -1,0 +1,8 @@
+{
+  "name": "main",
+  "directory": ["./src"],
+  "delete": true,
+  "location": "top",
+  "include": [".tsx$", ".ts$"],
+  "exclude": [".stories.tsx$"]
+}

@@ -1,0 +1,106 @@
+{
+  "name": "rich-slate",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Opinionated rich text editor built on top of slate",
+  "author": "ahmed osama",
+  "typings": "dist/main.d.ts",
+  "main": "dist/main.cjs.js",
+  "module": "dist/main.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/main.cjs.js",
+      "default": "./dist/main.esm.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedosama7450/rich-slate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmedosama7450/rich-slate/issues"
+  },
+  "homepage": "https://github.com/ahmedosama7450/rich-slate#readme",
+  "keywords": [
+    "rich text editor"
+  ],
+  "scripts": {
+    "build": "del-cli --force ./dist && rollup -c",
+    "release": "auto shipit --base-branch=main",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs --docs",
+    "generate-barrels": "barrelsby --config ./barrels.json --delete",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "overwind-ui": "^0.0.5",
+    "@babel/core": "^7.17.9",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@tailwindcss/forms": "^0.5.0",
+    "@types/node": "^18.6.1",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "auto": "^10.37.2",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.5",
+    "barrelsby": "^2.3.4",
+    "del-cli": "^4.0.1",
+    "eslint": "^8.20.0",
+    "eslint-config-next": "^12.2.3",
+    "eslint-plugin-storybook": "^0.6.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.12",
+    "prettier": "^2.7.1",
+    "rollup": "^2.71.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "storybook-addon-next-router": "^4.0.0",
+    "tailwindcss": "^3.0.24",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4",
+    "webpack": "^5.72.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.33.1",
+    "next": "^12.2.3",
+    "classnames": "^2.3.1",
+    "@headlessui/react": "^1.5.0"
+  },
+  "peerDependencies": {
+    "overwind-ui": "^x",
+    "@headlessui/react": "^1.5.0",
+    "classnames": "^2",
+    "next": "^12",
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18",
+    "react-hook-form": "^7"
+  },
+  "resolutions": {
+    "webpack": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": "eslint --cache --fix",
+    "*.{ts,js,tsx,jsx,html,css,md}": "prettier --write"
+  },
+  "auto": {
+    "plugins": [
+      "npm"
+    ]
+  }
+}
