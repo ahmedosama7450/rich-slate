@@ -2,7 +2,10 @@
 module.exports = {
   presets: [require("overwind-ui/tailwind")],
 
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./node_modules/overwind-ui/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
 
   plugins: [require("@tailwindcss/typography")],
 };

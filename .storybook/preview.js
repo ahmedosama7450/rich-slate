@@ -1,7 +1,8 @@
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import * as NextImage from "next/image";
 
-import { OverwindProvider } from "../src/OverwindProvider";
+import { OverwindProvider } from "overwind-ui";
+import { TailwindWrapper } from "./TailwindWrapper";
 
 const OriginalNextImage = NextImage.default;
 Object.defineProperty(NextImage, "default", {
@@ -12,7 +13,9 @@ Object.defineProperty(NextImage, "default", {
 export const decorators = [
   (Story) => (
     <OverwindProvider>
-      <Story />
+      <TailwindWrapper>
+        <Story />
+      </TailwindWrapper>
     </OverwindProvider>
   ),
 ];

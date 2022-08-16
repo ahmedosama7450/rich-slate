@@ -37,3 +37,7 @@ yarn-error.log*
 *.tsbuildinfo
 
 .eslintcache
+
+# Yalc
+/.yalc
+yalc.lock
