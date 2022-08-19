@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { createEditor, Descendant } from "slate";
 import { withHistory } from "slate-history";
 import { Slate, withReact } from "slate-react";
-import { PropsWithRequiredChildren, PropsWithState } from "overwind-ui";
+import { PropsWithRequiredChildren } from "overwind-ui";
 
 import {
   withBlocks,
@@ -29,18 +29,17 @@ export const RichSlateContext = createContext<RichSlateConfiguration>({
   images: false,
 });
 
-export type RichSlateProviderProps = PropsWithState<
-  Descendant[],
-  PropsWithRequiredChildren<{
-    configuration: RichSlateConfiguration;
-  }>
->;
+export type RichSlateProviderProps = PropsWithRequiredChildren<{
+  initialValue: Descendant[];
+  onChange?: (value: Descendant[]) => void;
+  configuration: RichSlateConfiguration;
+}>;
 
 export const RichSlateProvider = ({
   children,
 
-  value,
-  onChange: setValue,
+  initialValue,
+  onChange,
 
   configuration,
 }: RichSlateProviderProps) => {
@@ -74,13 +73,7 @@ export const RichSlateProvider = ({
   /* const editor = useMemo(// Code here, [configuration.images, configuration.separator]); */
 
   return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={(newValue) => {
-        setValue(newValue);
-      }}
-    >
+    <Slate editor={editor} value={initialValue} onChange={onChange}>
       <RichSlateContext.Provider value={configuration}>
         {children}
       </RichSlateContext.Provider>

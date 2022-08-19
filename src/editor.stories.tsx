@@ -12,12 +12,9 @@ export default {
 } as ComponentMeta<typeof RichSlate>;
 
 export const Example: ComponentStory<typeof RichSlate> = (args) => {
-  const [value, setValue] = React.useState<Descendant[]>(initialValue);
-
   return (
     <RichSlateProvider
-      value={value}
-      onChange={setValue}
+      initialValue={initialValue}
       configuration={{ images: true, multipleHeadings: true, separator: true }}
     >
       <div className={classNames("flex flex-col")}>
