@@ -1,5 +1,3 @@
-import "./globals.css";
-
 import { createContext } from "react";
 import { createEditor, Descendant } from "slate";
 import { withHistory } from "slate-history";

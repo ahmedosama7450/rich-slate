@@ -11,7 +11,8 @@
     ".": {
       "require": "./dist/main.cjs.js",
       "default": "./dist/main.esm.js"
-    }
+    },
+    "./tailwind": "./dist/tailwind.js"
   },
   "files": [
     "dist"
@@ -82,6 +83,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
     "rollup": "^2.71.1",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
