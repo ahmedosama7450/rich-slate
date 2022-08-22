@@ -37,12 +37,7 @@ export const RichSlateToolbar = ({
   const { multipleHeadings, separator, images } = useRichSlateConfiguration();
 
   return (
-    <div
-      className={classNames(
-        className,
-        "bg-secondary flex items-center gap-1 border border-gray-100 px-1 py-1"
-      )}
-    >
+    <div className={classNames(className, "flex items-center gap-1")}>
       {multipleHeadings ? (
         <>
           <ToolbarButton
