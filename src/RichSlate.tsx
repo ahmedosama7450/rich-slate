@@ -109,7 +109,7 @@ export const RichSlate = ({
         i18n={linkInputI18n}
       />
       <Editable
-        className="prose 2xl:prose-lg prose-primary mt-3 max-w-none"
+        className="prose 2xl:prose-lg prose-primary max-w-none"
         style={{ wordBreak: "break-word" }}
         placeholder={placeholder}
         spellCheck={false}
