@@ -14,6 +14,8 @@ export const renderElement =
         return <h2 {...attributes}>{children}</h2>;
       case "heading2":
         return <h3 {...attributes}>{children}</h3>;
+      case "heading3":
+        return <h4 {...attributes}>{children}</h4>;
       case "quote":
         return <blockquote {...attributes}>{children}</blockquote>;
       case "code-block":

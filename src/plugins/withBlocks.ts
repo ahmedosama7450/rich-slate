@@ -47,6 +47,7 @@ export const withBlocks = (editor: Editor) => {
           (node.type === "code-block" ||
             node.type === "heading1" ||
             node.type === "heading2" ||
+            node.type === "heading3" ||
             node.type === "quote") &&
           Editor.isEmpty(editor, node)
         ) {

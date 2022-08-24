@@ -17,6 +17,7 @@ export type RichSlateToolbarProps = PropsWithClassName<{
     imagePickerTitles: ImagePickerProps["titles"];
     heading1: string;
     heading2: string;
+    heading3: string;
     heading: string;
     quote: string;
     codeBlock: string;
@@ -56,6 +57,15 @@ export const RichSlateToolbar = ({
               EditorUtils.toggleBlock(editor, "heading2");
             }}
             selected={(editor) => EditorUtils.isBlockActive(editor, "heading2")}
+          />
+
+          <ToolbarButton
+            tooltip={i18n["heading3"]}
+            icon="ri:h-3"
+            listener={(editor) => {
+              EditorUtils.toggleBlock(editor, "heading3");
+            }}
+            selected={(editor) => EditorUtils.isBlockActive(editor, "heading3")}
           />
         </>
       ) : (

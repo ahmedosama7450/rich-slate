@@ -78,5 +78,5 @@ const softBreakRules: BreakRules = {
 
 const exitBreakRules: BreakRules = {
   "mod+enter": ["quote", "code-block"],
-  enter: ["heading1", "heading2"],
+  enter: ["heading1", "heading2", "heading3"],
 };

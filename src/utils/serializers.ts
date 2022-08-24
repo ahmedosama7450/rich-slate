@@ -31,9 +31,11 @@ function serializeToHtmlHelper(node: Descendant): string {
     case "paragraph": // Default can handle this, just saving a couple of checks because most elements are paragraphs
       return `<p>${children}</p>`;
     case "heading1":
-      return `<h1>${children}</h1`;
-    case "heading2":
       return `<h2>${children}</h2>`;
+    case "heading2":
+      return `<h3>${children}</h3>`;
+    case "heading3":
+      return `<h4>${children}</h4>`;
     case "quote":
       return `<blockquote>${children}</blockquote>`;
     case "code-block":

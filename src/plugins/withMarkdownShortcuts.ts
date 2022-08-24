@@ -6,6 +6,7 @@ import { EditorUtils } from "../utils/editor-utils";
 const MARKDOWN_SHORTCUTS: Record<string, ToggleableBlockType> = {
   "#": "heading1",
   "##": "heading2",
+  "###": "heading3",
   ">": "quote",
   "<": "quote",
   "```": "code-block",

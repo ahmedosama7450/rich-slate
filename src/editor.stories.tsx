@@ -29,6 +29,7 @@ export const Example: ComponentStory<typeof RichSlate> = (args) => {
               image: "Image",
               heading1: "Heading1",
               heading2: "Heading2",
+              heading3: "Heading3",
               quote: "Quote",
               redo: "Redo",
               undo: "Undo",

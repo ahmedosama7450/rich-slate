@@ -11,6 +11,7 @@ declare module "slate" {
       | ParagraphElement
       | Heading1Element
       | Heading2Element
+      | Heading3Element
       | QuoteElement
       | CodeBlockElement
       | BulletedListElement
@@ -42,6 +43,11 @@ export type Heading1Element = {
 
 export type Heading2Element = {
   type: "heading2";
+  children: InlineNode[];
+};
+
+export type Heading3Element = {
+  type: "heading3";
   children: InlineNode[];
 };
 
