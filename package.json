@@ -75,10 +75,11 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "next": "^12.2.3",
-    "overwind-ui": "0.35.0",
+    "overwind-ui": "0.35.1",
     "postcss": "^8.4.16",
     "postcss-import": "^14.1.0",
     "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
@@ -104,9 +105,9 @@
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18",
     "react-hook-form": "^7",
-    "slate": "^0.82.0",
+    "slate": "^0.82.1",
     "slate-history": "^0.66.0",
-    "slate-react": "^0.82.0"
+    "slate-react": "^0.82.1"
   },
   "resolutions": {
     "webpack": "^5"

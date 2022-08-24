@@ -1,10 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { RichSlate, RichSlateProvider, RichSlateToolbar } from "./main";
-
-import classNames from "classnames";
 import { Descendant } from "slate";
+import { RichSlate, RichSlateProvider, RichSlateToolbar } from "./main";
 
 export default {
   title: "Example Editor",
@@ -17,10 +15,10 @@ export const Example: ComponentStory<typeof RichSlate> = (args) => {
       initialValue={initialValue}
       configuration={{ images: true, multipleHeadings: true, separator: true }}
     >
-      <div className={classNames("flex flex-col")}>
-        <div className="sticky top-[var(--navbar-height)] z-40 bg-white pt-[var(--navbar-margin-bottom)]">
+      <div className="mx-auto max-w-4xl rounded-sm bg-white shadow">
+        <div className="sticky top-0 z-40">
           <RichSlateToolbar
-            className="rounded-lg"
+            className="rounded-t-sm border border-gray-200 bg-gray-50 px-1 py-1"
             i18n={{
               bulletedList: "Bulleted List",
               numberedList: "Numbered List",
@@ -46,7 +44,7 @@ export const Example: ComponentStory<typeof RichSlate> = (args) => {
           />
         </div>
 
-        <div className={classNames("grow py-3 px-1.5")}>
+        <div className="rounded-b-sm border-b border-r border-l border-gray-200 py-3 px-3">
           <RichSlate
             className="min-h-[calc(100vh-32px-var(--navbar-height)-var(--navbar-margin-bottom))]"
             i18n={{
