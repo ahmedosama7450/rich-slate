@@ -1,8 +1,9 @@
 import classNames from "classnames";
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { BaseSelection, Editor } from "slate";
 import { ReactEditor, useSlate } from "slate-react";
+import { PropsWithRequiredChildren } from "overwind-ui";
 
 export const HoveringContainer = ({
   children,
@@ -53,7 +54,7 @@ export const HoveringContainer = ({
   });
 
   return (
-    <Portal>
+    <ClientOnlyPortal>
       <div
         {...containerProps}
         ref={containerRef}
@@ -63,17 +64,23 @@ export const HoveringContainer = ({
         }}
         className={classNames(
           containerProps?.className,
-          "absolute z-50 top-[-10000px] left-[-10000px] opacity-0 transition duration-75"
+          "absolute top-[-10000px] left-[-10000px] z-50 opacity-0 transition duration-75"
         )}
       >
         {typeof children === "function" ? children(editor) : children}
       </div>
-    </Portal>
+    </ClientOnlyPortal>
   );
 };
 
-export const Portal = ({ children }: { children: ReactNode }) => {
-  return typeof document === "object"
-    ? createPortal(children, document.body)
-    : null;
-};
+export default function ClientOnlyPortal({
+  children,
+}: PropsWithRequiredChildren<{}>) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(typeof document === "object");
+  }, []);
+
+  return mounted ? createPortal(children, document.body) : null;
+}
