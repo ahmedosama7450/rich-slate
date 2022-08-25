@@ -29,11 +29,9 @@ In your `tsconfig.json`, add the following
 ```json
 {
   "compilerOptions": {
-    ....
     "typeRoots": ["./node_modules/@types", "./node_modules/rich-slate/dist"]
   }
 }
-
 ```
 
 3. Add `rich-slate` tailwind preset and tell tailwind to compile the classes used in the library.
@@ -54,7 +52,7 @@ module.exports = {
 };
 ```
 
-You should have @tailwindcss/typography installed because It's present in the plugins list of the tailwind preset.
+You should have `@tailwindcss/typography` installed because It's present in the plugins list of the tailwind preset.
 
 ## Usage
 
@@ -156,8 +154,6 @@ export const EditorExample = () => {
 ```
 
 ## Roadmap
-
-The editor lacks some core features
 
 - [ ] Add tests
 - [ ] Remove dependence on [overwind-ui](https://github.com/ahmedosama7450/overwind-ui)
