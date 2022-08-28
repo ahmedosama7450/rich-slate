@@ -161,10 +161,12 @@ export const EditorExample = () => {
 - [ ] Other rich text features
   - [ ] Mentions
   - [ ] Math expressions using [KaText](https://katex.org/)
+  - [ ] Special characters
   - [ ] Image caption/toolbar/resize/align
   - [ ] Code block highlight
   - [ ] Paste from word/html
   - [ ] Markdown mode
+  - [ ] Callout
   - [ ] More markdown shortcuts for inline formatting: code, bold, italic
   - [ ] More inline formatting options: underline, strike-through, superscript, subscript, highlight, remove format(mod + d)
   - [ ] Advanced spell checking (suggest changes)
