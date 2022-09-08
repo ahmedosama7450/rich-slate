@@ -12,10 +12,10 @@ export const Editor = () => {
       }}
     >
       <div className="mx-4 sm:mx-8">
-        <div className="mx-auto max-w-4xl rounded-sm bg-white shadow">
+        <div className="mx-auto max-w-4xl rounded bg-white shadow">
           <div className="sticky top-0 z-40">
             <RichSlateToolbar
-              className="flex-wrap rounded-t-sm border border-gray-200 bg-gray-50 px-1 py-2"
+              className="flex-wrap rounded-t border border-gray-200 bg-gray-50 px-1 py-2"
               i18n={{
                 bulletedList: "Bulleted List",
                 numberedList: "Numbered List",
@@ -41,7 +41,7 @@ export const Editor = () => {
             />
           </div>
 
-          <div className="rounded-b-sm border-b border-r border-l border-gray-200 py-3 px-3">
+          <div className="rounded-b border-b border-r border-l border-gray-200 py-3 px-3">
             <RichSlate
               i18n={{
                 balloonToolbarI18n: {
